@@ -1,0 +1,8 @@
+{
+  "bundle": "t001_macro_outlier_sd",
+  "source_file": "outlier_screening/06_macro/outlier_sd.sas",
+  "source_blob_sha": "dd5e3d3f4ecd5d22ed0aa0c14d88918bd7cfd178",
+  "source_commit": "b9597a98f653dacc7ef112b9d0bb30d2826a9b9f",
+  "tier": "real_data",
+  "notes": "%outlier_SD macro verbatim from the repo; adsl test data + caller from the README. PROC STDIZE method=std standardizes AGE; |Z|>3 flags 2 of 96 rows (AGE 101 -> Z=3.32, AGE 110 -> Z=3.97). Only adaptation: normal-row loop 200 -> 90 so injected extremes stay within an unlicensed 100-obs run."
+}

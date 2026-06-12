@@ -1,0 +1,16 @@
+                                       SD (Z-score) outliers flagged in adsl.AGE                                        
+
+
+  Obs   USUBJID  AGE       STD_AGE   STD_AGE_ABS  CRITERIA_SD  OUTLIER_SDFL
+-----  --------  ---  ------------  ------------  -----------  ------------
+    1  SUBJ0095  101  3.3242955467  3.3242955467            3  Y
+    2  SUBJ0097  110  3.9688627263  3.9688627263            3  Y
+
+                                       SD (Z-score) outliers flagged in adsl.AGE                                        
+
+                                                   The FREQ Procedure
+
+outlier_SDFL    Frequency    Percent
+-------------------------------------
+N                      94     97.92
+Y                       2      2.08

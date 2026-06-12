@@ -1,0 +1,71 @@
+                                                The UNIVARIATE Procedure
+                                                     Variable:  AGE
+
+                                                        Moments
+
+N                                 96    Sum Weights                       96
+Mean                       54.583333    Sum Observations         5240.000000
+Std Deviation              13.962858    Variance                  194.961404
+Skewness                    0.726429    Kurtosis                    3.899103
+Uncorrected SS         304538.000000    Corrected SS            18521.333333
+Coeff Variation            25.580809    Std Error Mean              1.425078
+
+          Basic Statistical Measures          
+
+Location             Variability              
+--------  ---------  -------------  ----------
+Mean      54.583333  Std Deviation   13.962858
+Median    54.500000  Variance       194.961404
+Mode      48.000000  Range           93.000000
+
+     NOTE: The mode displayed is the smallest of 2 modes with a count of 6.
+
+Quantiles (Definition 5)
+
+Quantile      Estimate
+----------  ----------
+0% Min       17.000000
+1%           17.000000
+5%           35.000000
+10%          40.000000
+25% Q1       47.000000
+50% Median   54.500000
+75% Q3       61.000000
+90%          66.000000
+95%          74.000000
+99%         110.000000
+100% Max    110.000000
+
+          Extreme Observations           
+
+Lowest               Highest             
+--------  ---------  --------  ----------
+Value     17.000000  Value      74.000000
+Value     19.000000  Value      78.000000
+Value     19.000000  Value      95.000000
+Value     33.000000  Value     101.000000
+Value     35.000000  Value     110.000000
+
+
+
+
+         Tests for Location          
+
+Test                Statistic   p Value
+------------------  ---------  --------
+Student's t         38.301990934         0
+Sign                       48         0
+Signed Rank              4656         0
+
+                                 Combined outlier review (all3): flag pattern by method                                 
+
+
+  Obs   USUBJID  AGE  OUTLIER_SDFL  OUTLIER_MADFL  OUTLIER_IQR1_5FL  OUTLIER_IQR3FL  ASC_RANK  DESC_RANK
+-----  --------  ---  ------------  -------------  ----------------  --------------  --------  ---------
+    1  SUBJ0092   19  N             N              Y                 N                      2         41
+    2  SUBJ0093   19  N             N              Y                 N                      2         41
+    3  SUBJ0094   95  N             Y              Y                 N                     40          3
+    4  SUBJ0095  101  Y             Y              Y                 N                     41          2
+    5  SUBJ0096   17  N             Y              Y                 N                      1         42
+    6  SUBJ0097  110  Y             Y              Y                 Y                     42          1
+

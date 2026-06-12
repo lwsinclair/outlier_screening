@@ -1,0 +1,8 @@
+{
+  "bundle": "t002_macro_outlier_mad",
+  "source_file": "outlier_screening/06_macro/outlier_mad.sas",
+  "source_blob_sha": "49c1de5b9d6a1e0605e47a7dcfa8fa9494c30503",
+  "source_commit": "b9597a98f653dacc7ef112b9d0bb30d2826a9b9f",
+  "tier": "real_data",
+  "notes": "%outlier_MAD macro verbatim from the repo; adsl test data + caller from the README. PROC STDIZE method=mad computes MAD-standardized scores; abs(0.6745*mad) > 3.5 flags 4 of 96 rows (AGE 95, 101, 17, 110). The robust MAD method catches the moderate extremes (17, 95) the SD method misses. Only adaptation: normal-row loop 200 -> 90 so injected extremes stay within an unlicensed 100-obs run."
+}

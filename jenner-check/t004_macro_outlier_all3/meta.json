@@ -1,0 +1,8 @@
+{
+  "bundle": "t004_macro_outlier_all3",
+  "source_file": "outlier_screening/06_macro/outlier_all3.sas",
+  "source_blob_sha": "2c869eef30d3ee6c9ab8f648c7ecec21f9fab7c2",
+  "source_commit": "b9597a98f653dacc7ef112b9d0bb30d2826a9b9f",
+  "tier": "real_data",
+  "notes": "%outlier_all3 orchestrator plus the three component macros, all verbatim from the repo; adsl test data + caller from the README. Runs SD + MAD + IQR, combines flags, adds asc_rank/desc_rank (PROC RANK ties=dense), draws the annotated scatter+boxplot (PROC SGPLOT -> sgplot.svg/png), and prints PROC UNIVARIATE extreme observations. Combined output shows method agreement (AGE 110 flagged by all four; 17/95 by MAD+IQR). Only adaptation: normal-row loop 200 -> 90 so injected extremes stay within an unlicensed 100-obs run."
+}

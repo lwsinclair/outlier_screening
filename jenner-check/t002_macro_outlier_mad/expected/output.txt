@@ -1,0 +1,18 @@
+                                MAD robust-Z outliers flagged in adsl.AGE (criteria=3.5)                                
+
+
+  Obs   USUBJID  AGE        MAD_AGE   MAD_AGE_ABS  CRITERIA_MAD  OUTLIER_MADFL
+-----  --------  ---  -------------  ------------  ------------  -------------
+    1  SUBJ0094   95   5.7857142857  3.9024642857           3.5  Y
+    2  SUBJ0095  101   6.6428571429  4.4806071429           3.5  Y
+    3  SUBJ0096   17  -5.3571428571  3.6133928571           3.5  Y
+    4  SUBJ0097  110   7.9285714286  5.3478214286           3.5  Y
+
+                                MAD robust-Z outliers flagged in adsl.AGE (criteria=3.5)                                
+
+                                                   The FREQ Procedure
+
+outlier_MADFL    Frequency    Percent
+--------------------------------------
+N                       92     95.83
+Y                        4      4.17

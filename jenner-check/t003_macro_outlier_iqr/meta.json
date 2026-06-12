@@ -1,0 +1,8 @@
+{
+  "bundle": "t003_macro_outlier_iqr",
+  "source_file": "outlier_screening/06_macro/outlier_iqr.sas",
+  "source_blob_sha": "f20cfb9be79694fa91ec8c98fe26c18f6d8211bb",
+  "source_commit": "b9597a98f653dacc7ef112b9d0bb30d2826a9b9f",
+  "tier": "real_data",
+  "notes": "%outlier_IQR macro verbatim from the repo; advs test data + BY-group caller from the README. PROC UNIVARIATE computes Q1/Q3 per PARAMCD; a hash object joins them back per group; Tukey 1.5*IQR and 3*IQR fences flag 5 of 90 rows across SBP/DBP/HR. Only adaptation: subject loop 160 -> 30 so each group's injected extremes stay within an unlicensed 100-obs run."
+}

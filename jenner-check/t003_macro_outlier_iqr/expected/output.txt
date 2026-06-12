@@ -1,0 +1,27 @@
+                           IQR-rule outliers by PARAMCD (hash lookup of per-group quartiles)                            
+
+
+  Obs   USUBJID  PARAMCD  AVAL      Q1      Q3     IQR  OUTLIER_IQR1_5FL  OUTLIER_IQR3FL
+-----  --------  -------  ----  ------  ------  ------  ----------------  --------------
+    1  SUBJ0008  DBP        45  68.325  82.825    14.5  Y                 N
+    2  SUBJ0012  DBP       110  68.325  82.825    14.5  Y                 N
+    3  SUBJ0015  HR         35  61.725    77.7  15.975  Y                 N
+    4  SUBJ0022  HR        130  61.725    77.7  15.975  Y                 Y
+    5  SUBJ0005  SBP       175   111.5  131.55   20.05  Y                 N
+
+                           IQR-rule outliers by PARAMCD (hash lookup of per-group quartiles)                            
+
+                                                   The FREQ Procedure
+
+Table of PARAMCD by outlier_IQR1_5FL
+
+PARAMCD |         N |         Y |      Total
+--------+-----------+-----------+-----------
+DBP     |        28 |         2 |         30
+--------+-----------+-----------+-----------
+HR      |        28 |         2 |         30
+--------+-----------+-----------+-----------
+SBP     |        29 |         1 |         30
+--------+-----------+-----------+-----------
+Total   |        85 |         5 |         90
+

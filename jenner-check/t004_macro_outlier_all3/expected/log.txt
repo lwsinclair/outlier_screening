@@ -1,0 +1,98 @@
+Jenner 0.1.0 (Unlicensed - limited to 100 observations)
+Get a license at https://jenneranalytics.com/license
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA adsl
+
+
+NOTE: Wrote adsl (96 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC STDIZE data=adsl
+
+NOTE: PROC STDIZE: Wrote 96 rows to outlier_SD1
+NOTE: DATA outlier_adsl_sd
+
+
+NOTE: Read 96 rows from outlier_SD1.
+NOTE: Wrote outlier_adsl_sd (96 rows, 8 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC DELETE datasets=outlier_SD1
+
+NOTE: Deleting OUTLIER_SD1 (memtype=DATA).
+NOTE: 1 dataset(s) deleted.
+NOTE: PROC STDIZE data=outlier_adsl_sd
+
+NOTE: PROC STDIZE: Wrote 96 rows to outlier_MAD1
+NOTE: DATA outlier_adsl_mad
+
+
+NOTE: Read 96 rows from outlier_MAD1.
+NOTE: Wrote outlier_adsl_mad (96 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC DELETE datasets=outlier_MAD1
+
+NOTE: Deleting OUTLIER_MAD1 (memtype=DATA).
+NOTE: 1 dataset(s) deleted.
+NOTE: PROC UNIVARIATE
+NOTE: Output dataset _iqr_ has 1 observations and 2 variables.
+NOTE: DATA outlier_adsl_iqr
+
+
+NOTE: Read 96 rows from outlier_adsl_mad.
+NOTE: Wrote outlier_adsl_iqr (96 rows, 21 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC DELETE datasets=_iqr_
+
+NOTE: Deleting _IQR_ (memtype=DATA).
+NOTE: 1 dataset(s) deleted.
+NOTE: DATA outlier_adsl_all3
+
+
+NOTE: Read 96 rows from outlier_adsl_iqr.
+NOTE: Wrote outlier_adsl_all3 (96 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC RANK data=outlier_adsl_all3 out=Some("outlier_adsl_all3")
+
+
+NOTE: Read 96 rows from /tmp/work/work/890a6bb6-07c6-4aa6-87e1-cc93e57a30c9/outlier_adsl_all3.avro.
+NOTE: Wrote /tmp/work/work/890a6bb6-07c6-4aa6-87e1-cc93e57a30c9/outlier_adsl_all3.avro (96 rows, 11 columns).
+NOTE: PROC RANK elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC RANK data=outlier_adsl_all3 out=Some("outlier_adsl_all3") descending
+
+
+NOTE: Read 96 rows from /tmp/work/work/890a6bb6-07c6-4aa6-87e1-cc93e57a30c9/outlier_adsl_all3.avro.
+NOTE: Wrote /tmp/work/work/890a6bb6-07c6-4aa6-87e1-cc93e57a30c9/outlier_adsl_all3.avro (96 rows, 12 columns).
+NOTE: PROC RANK elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA outlier_adsl_graph
+
+
+NOTE: Read 96 rows from outlier_adsl_all3.
+NOTE: Wrote outlier_adsl_graph (96 rows, 14 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FORMAT library=WORK
+
+NOTE: FORMAT dummy defined (1 ranges).
+NOTE: PROC SGPLOT data=outlier_adsl_graph
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg
+NOTE: PROC UNIVARIATE
+NOTE: Option TITLE changed to Combined outlier review (all3): flag pattern by method.
+NOTE: PROC PRINT data=outlier_adsl_all3
+
+NOTE: PROC PRINT completed: 6 observations printed, 8 variables

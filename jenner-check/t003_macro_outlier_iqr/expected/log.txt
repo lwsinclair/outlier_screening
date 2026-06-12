@@ -1,0 +1,38 @@
+Jenner 0.1.0 (Unlicensed - limited to 100 observations)
+Get a license at https://jenneranalytics.com/license
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA advs
+
+
+NOTE: Wrote advs (90 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SORT data=advs
+
+NOTE: Unlicensed mode - input limited to 100 observations.
+NOTE: Read 90 rows from advs.
+NOTE: Wrote advs (90 rows, 3 columns).
+NOTE: PROC SORT statement used.
+NOTE: PROC UNIVARIATE
+NOTE: Output dataset _iqr_ has 3 observations and 3 variables.
+NOTE: DATA iqr_out
+
+
+NOTE: Read 90 rows from advs.
+NOTE: Wrote iqr_out (90 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC DELETE datasets=_iqr_
+
+NOTE: Deleting _IQR_ (memtype=DATA).
+NOTE: 1 dataset(s) deleted.
+NOTE: Option TITLE changed to IQR-rule outliers by PARAMCD (hash lookup of per-group quartiles).
+NOTE: PROC PRINT data=iqr_out
+
+NOTE: PROC PRINT completed: 5 observations printed, 8 variables
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_mosaic_paramcd_outlier_iqr1_5fl.spec.json
+NOTE: PROC FREQ statement used.
